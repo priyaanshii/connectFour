@@ -3,13 +3,15 @@ import os
 from player import Player
 from board import Board
 
+
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def main() :
+
+def main():
     p1 = Player(symbol="X")
     p2 = Player(symbol="Y")
-    board = Board(6,7,[p1,p2])
+    board = Board(6, 7, [p1, p2])
 
     while True:
         while True:
@@ -30,5 +32,6 @@ def main() :
             print(f"Player {board.turn} has won!")
             break
         board.changeTurn()
+
 
 main()
